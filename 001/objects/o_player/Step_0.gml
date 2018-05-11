@@ -1,6 +1,6 @@
+//--基本移動碰撞偵測部分--//
 //Smooth移動設定
 var hinput = keyboard_check(vk_right) -  keyboard_check(vk_left);
-
 
 //左右移動
 if hinput != 0
@@ -13,7 +13,6 @@ else  //可微調的停止Smooth煞車動作((越小煞越慢
 {
 	hspeed_ = lerp(hspeed_ , 0 , .3);
 }
-
 
 //重力偵測
 if !place_meeting(x ,y+1 ,o_block)
@@ -48,3 +47,34 @@ if place_meeting(x,y+vspeed_,o_block)
 	vspeed_ = 0;
 }	
 y += vspeed_;
+
+//--繪製武器與瞄準點部分--// ((拾取武器部分未設定
+//根據移動加速量調整方向變量
+if  hspeed_ > 0
+{
+	xscale = -1;
+}
+if  hspeed_ < 0
+{
+	 xscale = 1;
+}
+
+//調整瞄準點變量 (y軸)
+if keyboard_check(vk_numpad1)
+{	
+	aim_angle += 5;
+	aim_angle = clamp(aim_angle,0,180); 
+}
+if keyboard_check(vk_numpad3)
+{
+	aim_angle -= 5;
+	aim_angle = clamp(aim_angle,0,180); 
+}
+
+//三角函數定義瞄準點XY角度
+aimpoint01x = 500*sin(aim_angle/180*pi);
+aimpoint01y = 500*cos(aim_angle/180*pi);
+
+
+
+

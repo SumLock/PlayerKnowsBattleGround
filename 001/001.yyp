@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "69e9dac1-ce52-4af2-9065-673924fb1ee4",
+            "Value": {
+                "id": "4c81dea6-19fd-41ee-ba10-a5d3839b0548",
+                "resourcePath": "objects\\o_bullet_rifle\\o_bullet_rifle.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6b283bf1-7d1d-4eef-965d-c913753a2b22",
             "Value": {
                 "id": "3e9a42fd-b05a-4769-941c-d0b29155a3d0",
@@ -159,9 +167,9 @@
             }
         },
         {
-            "Key": "88d3b741-c34c-4737-b1c4-2d546000564a",
+            "Key": "8969970f-01ad-4863-b915-8532ef210989",
             "Value": {
-                "id": "70712f4a-4c81-4f4b-af07-e4e32f6ab14f",
+                "id": "0dcd59b1-856e-4fc8-b69b-dd791dc03287",
                 "resourcePath": "objects\\aimpoint01\\aimpoint01.yy",
                 "resourceType": "GMObject"
             }

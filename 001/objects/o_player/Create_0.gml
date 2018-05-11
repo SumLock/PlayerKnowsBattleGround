@@ -16,5 +16,7 @@ jump_max_ = -30;
 //方向變量
 xscale = 1;
 //瞄準點變量
-aim_angle = 0;
+aim_angle = 90;
+//開火頻率
+canShoot = 0;
 

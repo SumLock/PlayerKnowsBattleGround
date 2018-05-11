@@ -1,28 +1,28 @@
 {
-    "id": "8969970f-01ad-4863-b915-8532ef210989",
+    "id": "69e9dac1-ce52-4af2-9065-673924fb1ee4",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "aimpoint01",
+    "name": "o_bullet_rifle",
     "eventList": [
         {
-            "id": "0d4b6f36-4eec-49bc-b9c1-c5a2d1b7dc51",
+            "id": "07e8c46c-6c9e-4400-8112-7a096cf60e57",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "8969970f-01ad-4863-b915-8532ef210989"
+            "m_owner": "69e9dac1-ce52-4af2-9065-673924fb1ee4"
         },
         {
-            "id": "31c62f15-f587-4b65-a77f-2b87e299dcf0",
+            "id": "d07fb0cb-a775-4f7c-8152-c51215eccb70",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 3,
-            "m_owner": "8969970f-01ad-4863-b915-8532ef210989"
+            "m_owner": "69e9dac1-ce52-4af2-9065-673924fb1ee4"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -43,6 +43,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "7b4f9298-4584-48bd-ad5e-327e6021eac2",
+    "spriteId": "6b283bf1-7d1d-4eef-965d-c913753a2b22",
     "visible": true
 }
