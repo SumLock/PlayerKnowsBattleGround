@@ -8,6 +8,7 @@ if hinput != 0
 	hspeed_ += hinput * acc_;
 	//水平向量範圍
 	hspeed_ = clamp(hspeed_,-max_hspeed_,max_hspeed_); 
+
 }
 else  //可微調的停止Smooth煞車動作((越小煞越慢
 {
@@ -48,7 +49,10 @@ if place_meeting(x,y+vspeed_,o_block)
 }	
 y += vspeed_;
 
-//--繪製武器與瞄準點部分--// ((拾取武器部分未設定
+//Smooth回復設定 (值越小越慢)
+
+
+//--繪製武器與瞄準點部分--// 
 //根據移動加速量調整方向變量
 if  hspeed_ > 0
 {
@@ -56,7 +60,7 @@ if  hspeed_ > 0
 }
 if  hspeed_ < 0
 {
-	 xscale = 1;
+    xscale = 1;
 }
 
 //調整瞄準點變量 (y軸)
