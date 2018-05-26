@@ -1,5 +1,6 @@
 
-
+//繪製血條
+draw_sprite_ext(HP_BAR, player_hp , x+10 , y-170 , 1 , 1 , 0 , image_blend , image_alpha);
 
 if !place_meeting(x ,y+1 ,o_block)
 {
@@ -17,21 +18,6 @@ else
     draw_sprite_ext(player01_idle, image_index , x ,y , xscale , 1 ,0 ,image_blend,image_alpha);
 }
 
-//繪製霰彈槍的情況
-if (gun_type == 2)
-{
-	if xscale == 1
-    {
-	var dir = point_direction(x,y,x-aimpoint01x,y-aimpoint01y);
-	draw_sprite_ext(gun_SHG, 0 , x ,y , -xscale , -1 , dir ,image_blend,image_alpha);
-    }
-if xscale == -1
-    {
-	var dir = point_direction(x,y,x+aimpoint01x,y+aimpoint01y);
-	draw_sprite_ext(gun_SHG, 0 , x ,y , xscale , 1 , dir ,image_blend,image_alpha);
-    }
-}
-
 
 //繪製衝鋒槍的情況
 if (gun_type == 1)
@@ -43,7 +29,7 @@ if (gun_type == 1)
     }
     if xscale == -1
     {
-	var dir = point_direction(x,y,x+aimpoint01x,y+aimpoint01y);
+	var dir = point_direction(x,y,x+aimpoint01x,y-aimpoint01y);
 	draw_sprite_ext(gun_SMG, 0 , x ,y , xscale , 1 , dir ,image_blend,image_alpha);
     }
 }
@@ -57,7 +43,7 @@ if (gun_type == 2)
     }
     if xscale == -1
     {
-	var dir = point_direction(x,y,x+aimpoint01x,y+aimpoint01y);
+	var dir = point_direction(x,y,x+aimpoint01x,y-aimpoint01y);
 	draw_sprite_ext(gun_SHG, 0 , x ,y , xscale , 1 , dir ,image_blend,image_alpha);
     }
 }
@@ -71,13 +57,14 @@ if (gun_type == 3)
     }
     if xscale == -1
     {
-	var dir = point_direction(x,y,x+aimpoint01x,y+aimpoint01y);
+	var dir = point_direction(x,y,x+aimpoint01x,y-aimpoint01y);
 	draw_sprite_ext(gun_RF, 0 , x ,y , xscale , 1 , dir ,image_blend,image_alpha);
     }
 }
 //繪製狙擊槍的情況
 if (gun_type == 4)
 {
+	draw_line_width_color(x , y-30 , r[1] , r[2] ,5, c_red , c_red);
 	if xscale == 1
     {
 	var dir = point_direction(x,y,x-aimpoint01x,y-aimpoint01y);
@@ -85,7 +72,7 @@ if (gun_type == 4)
     }
     if xscale == -1
     {
-	var dir = point_direction(x,y,x+aimpoint01x,y+aimpoint01y);
+	var dir = point_direction(x,y,x+aimpoint01x,y-aimpoint01y);
 	draw_sprite_ext(gun_SG, 0 , x ,y , xscale , 1 , dir ,image_blend,image_alpha);
     }
 }
@@ -99,7 +86,7 @@ if (gun_type == 5)
     }
     if xscale == -1
     {
-	var dir = point_direction(x,y,x+aimpoint01x,y+aimpoint01y);
+	var dir = point_direction(x,y,x+aimpoint01x,y-aimpoint01y);
 	draw_sprite_ext(gun_RG, 0 , x ,y , xscale , 1 , dir ,image_blend,image_alpha);
     }
 }

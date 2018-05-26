@@ -7,10 +7,11 @@
         "69e9dac1-ce52-4af2-9065-673924fb1ee4",
         "7f5a8776-51e4-42ba-ab26-8f4c126f5431",
         "7d06ff0a-0936-4382-a1f5-0dd761c7bd21",
-        "b0bf94b1-662a-4bdc-a2c5-6870c54557cf"
+        "b0bf94b1-662a-4bdc-a2c5-6870c54557cf",
+        "5ceaff59-a6d3-411e-88f1-3084b96f45da"
     ],
     "filterType": "GMObject",
-    "folderName": "bullet",
+    "folderName": "p1_bullet",
     "isDefaultView": false,
     "localisedFolderName": ""
 }
