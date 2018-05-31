@@ -6,7 +6,7 @@ if (gun_type == 1)
 {
    if canShoot<=1
    {
-     instance_create_layer(x , y-15, 0 ,o_bullet_SMG_p2);
+     instance_create_layer(x , y+20, 0 ,o_bullet_SMG_p2);
      canShoot += 0.07*room_speed; //開火頻率,越小越快
    }
    else if canShoot > 1
@@ -19,16 +19,12 @@ if (gun_type == 2)
 {
    if canShoot<=1
    {
-     instance_create_layer(x , y-15 , 0 ,o_bullet_SHG_p2);
-	 instance_create_layer(x , y-15 , 0 ,o_bullet_SHG_p2);
-	 instance_create_layer(x , y-15 , 0 ,o_bullet_SHG_p2);
-	 instance_create_layer(x , y-15 , 0 ,o_bullet_SHG_p2);
-	 instance_create_layer(x , y-15 , 0 ,o_bullet_SHG_p2);
-	 instance_create_layer(x , y-15 , 0 ,o_bullet_SHG_p2);
-	 instance_create_layer(x , y-15 , 0 ,o_bullet_SHG_p2);
-	 instance_create_layer(x , y-15 , 0 ,o_bullet_SHG_p2);
-	 instance_create_layer(x , y-15 , 0 ,o_bullet_SHG_p2);
-	 instance_create_layer(x , y-15 , 0 ,o_bullet_SHG_p2);
+     instance_create_layer(x , y+20 , 0 ,o_bullet_SHG_p2);
+	 instance_create_layer(x , y+20 , 0 ,o_bullet_SHG_p2);
+	 instance_create_layer(x , y+20 , 0 ,o_bullet_SHG_p2);
+	 instance_create_layer(x , y+20 , 0 ,o_bullet_SHG_p2);
+	 instance_create_layer(x , y+20 , 0 ,o_bullet_SHG_p2);
+	 instance_create_layer(x , y+20 , 0 ,o_bullet_SHG_p2);
 
      canShoot += 0.85*room_speed; //開火頻率,越小越快 
    }
@@ -42,7 +38,7 @@ if (gun_type == 3)
 {
    if canShoot<=1
    {
-     instance_create_layer(x , y-10 , 0 ,o_bullet_RF_p2);
+     instance_create_layer(x , y+30 , 0 ,o_bullet_RF_p2);
      canShoot += 0.12*room_speed; //開火頻率,越小越快
    }
    else if canShoot > 1
@@ -55,8 +51,8 @@ if (gun_type == 4)
 {
    if canShoot<=1
    {
-     instance_create_layer(x , y-30 , 0 ,o_bullet_SG_p2);
-     canShoot += 1.2*room_speed; //開火頻率,越小越快
+     instance_create_layer(x , y , 0 ,o_bullet_SG_p2);
+     canShoot += 0.7*room_speed; //開火頻率,越小越快
    }
    else if canShoot > 1
    {

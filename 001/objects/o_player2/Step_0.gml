@@ -98,6 +98,18 @@ else if (o_player2.gun_type != 0) && (have_gun == false)
 }
 
 //--寫被擊中時的狀態--//
+//頭盔被擊中歸零時
+if (player_helm <= 0)
+{
+  helm_type = 0;
+  helm_resist = 1;
+}
+//護甲被擊中歸零時
+if (player_vest <= 0)
+{
+  vest_type = 0;
+  vest_resist = 1;
+}
 //HP歸零時
 if (player_hp <= 0)
 {

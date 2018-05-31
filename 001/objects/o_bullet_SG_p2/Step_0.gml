@@ -1,16 +1,18 @@
 //子彈碰撞偵測 (打到牆壁會消失
-
+;
 if place_meeting(x+10,y+10,o_block)
 {
-        instance_destroy();
+     instance_destroy();
 }	
 if place_meeting(x , y , o_player1_head)
 {
 	instance_destroy();
-    o_player.player_hp -= 100;
+    o_player.player_hp -= 220*o_player.helm_resist;
+	o_player.player_helm -= 220;
 }
 else if place_meeting(x , y , o_player)
 {
     instance_destroy();
-	o_player.player_hp -= 70;
+	o_player.player_hp -= 130*o_player.vest_resist;
+    o_player.player_vest -= 130;
 }
