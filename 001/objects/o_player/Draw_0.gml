@@ -2,7 +2,13 @@
 //繪製血條
 draw_sprite_ext(HP_BAR, player_hp , x+10 , y-180 , 1 , 1 , 0 , image_blend , image_alpha);
 
-if !place_meeting(x,y+40,o_block)
+//繪製降落傘
+if is_parachute == 1 
+{
+   draw_sprite_ext(parachute , image_index , x , y-30 , 1,1,0 ,image_blend,image_alpha);
+   draw_sprite_ext(player01_jump, 6 , x ,y , xscale , 1 ,0 ,image_blend,image_alpha);
+}
+else if !place_meeting(x,y+40,o_block)
 {
 	//繪製玩家跳躍圖像
    draw_sprite_ext(player01_jump, image_index , x ,y , xscale , 1 ,0 ,image_blend,image_alpha);
@@ -20,6 +26,7 @@ else
     draw_sprite_ext(player01_idle, image_index , x ,y , xscale , 1 ,0 ,image_blend,image_alpha);
 	image_speed = .5;
 }
+
 
 //繪製Lv1頭盔和防護值的情況
 if (helm_type == 1)
@@ -136,7 +143,7 @@ if (gun_type == 5)
 //衝鋒槍開火動畫
 if (gun_type == 1)
 {
-   if (canShoot<=1 && keyboard_check(vk_numpad5))
+   if (canShoot>=1 && keyboard_check(vk_numpad5))
    {
 	   if (xscale == 1)
 	   {
@@ -151,7 +158,7 @@ if (gun_type == 1)
 //霰彈槍開火動畫
 if (gun_type == 2)
 {
-   if (canShoot<=1 && keyboard_check(vk_numpad5))
+   if (canShoot>=1 && keyboard_check(vk_numpad5))
    {
 	   if (xscale == 1)
 	   {
@@ -166,7 +173,7 @@ if (gun_type == 2)
 //步槍開火動畫
 if (gun_type == 3)
 {
-   if (canShoot<=1 && keyboard_check(vk_numpad5))
+   if (canShoot>=1 && keyboard_check(vk_numpad5))
    {
 	   if (xscale == 1)
 	   {
@@ -181,7 +188,7 @@ if (gun_type == 3)
 //狙擊槍開火動畫
 if (gun_type == 4)
 {
-   if (canShoot<=1 && keyboard_check(vk_numpad5))
+   if (canShoot>=1 && keyboard_check(vk_numpad5))
    {
 	   if (xscale == 1)
 	   {

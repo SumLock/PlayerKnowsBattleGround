@@ -15,15 +15,30 @@ else  //可微調的停止Smooth煞車動作((越小煞越慢
 	hspeed_ = lerp(hspeed_ , 0 , .3);
 }
 
+//跳傘時的設定
+if place_meeting(x,y+vspeed_,o_block)
+{
+  is_parachute = 0;
+  max_hspeed_ = 12;
+  gravity_ = 1;
+  vspeed_ = 0;
+}
 
-//重力偵測
-if !place_meeting(x ,y+1 ,o_block)
+if(is_parachute == 0)
 {
-	vspeed_ += gravity_;
-} //跳躍設定
-else if keyboard_check_pressed(ord("W"))
+  collision02();
+}
+
+y += vspeed_;
+
+//在地圖極限距離時強制跳傘
+if (o_plane.x > 4900) && is_onplane == 1
 {
-	vspeed_ = jump_max_;
+   x = o_plane.x;
+   y = o_plane.y;
+   vspeed_ = 4;
+   visible = true;
+   is_onplane = 0;
 }
 
 //水平碰撞偵測
@@ -38,17 +53,6 @@ if place_meeting(x+hspeed_,y,o_block)
 }	
 x += hspeed_;
 
-//垂直碰撞偵測
-if place_meeting(x,y+vspeed_,o_block)
-{
-	//Smooth碰撞
-	while !place_meeting(x,y+sign(vspeed_),o_block)
-	{
-		y += sign(vspeed_);
-	}			//
-	vspeed_ = 0;
-}	
-y += vspeed_;
 
 
 //--繪製武器與瞄準點部分--// 
@@ -78,6 +82,12 @@ if keyboard_check(ord("T"))
 aimpoint02x = 500*sin(aim_angle/180*pi);
 aimpoint02y = 500*cos(aim_angle/180*pi);
 
+//射擊速度冷卻時間
+if canShoot < 1
+{
+   canShoot += 0.1*gun_colddown;
+}
+
 //取得Script_redline的r陣列回傳值
 //產生瞄準點object
 if (gun_type == 4)
@@ -93,7 +103,7 @@ if (gun_type == 4)
 }
 else if (o_player2.gun_type != 0) && (have_gun == false)
 {
-	instance_create_layer( x, y, 0 , aimpoint02);
+	instance_create_depth( x, y, 0 , aimpoint02);
 	have_gun = true;
 }
 
