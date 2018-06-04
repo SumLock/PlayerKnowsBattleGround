@@ -2,8 +2,9 @@
 x += 7;
 
 //飛離地圖時消失
-if (x = 5400)
+if (x >= 5400)
 {
+   GM.is_planeext = 0;
    instance_destroy();
 }
 

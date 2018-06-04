@@ -295,6 +295,14 @@
             }
         },
         {
+            "Key": "43da8840-cb8e-4324-8964-cfa3cbed82d2",
+            "Value": {
+                "id": "bdd6d76e-7876-44da-a1a9-22d225bfbe16",
+                "resourcePath": "sprites\\P1_dead\\P1_dead.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "448a737e-ffb7-4649-b5de-47afb3ed5893",
             "Value": {
                 "id": "8c5d6728-8e5e-4e58-8bc5-07e200329123",

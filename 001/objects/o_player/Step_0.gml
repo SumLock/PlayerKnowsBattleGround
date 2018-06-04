@@ -22,7 +22,6 @@ if place_meeting(x,y+vspeed_,o_block)
   max_hspeed_ = 12;
   gravity_ = 1;
   vspeed_ = 0;
-  object_set_visible(o_player,false);
 }
 
 if(is_parachute == 0)
@@ -33,13 +32,16 @@ if(is_parachute == 0)
 y += vspeed_;
 
 //在地圖極限距離時強制跳傘
-if (o_plane.x > 4900) && is_onplane == 1
+if GM.is_planeext == 1
 {
-   x = o_plane.x;
-   y = o_plane.y;
-   vspeed_ = 4;
-   visible = true;
-   is_onplane = 0;
+  if (o_plane.x > 4900) && is_onplane == 1
+  {
+     x = o_plane.x;
+     y = o_plane.y;
+     vspeed_ = 4;
+     visible = true;
+     is_onplane = 0;
+  }
 }
 
 //水平碰撞偵測
@@ -126,6 +128,7 @@ if (player_hp <= 0)
   instance_destroy();
   instance_destroy(o_player1_head);
   instance_destroy(aimpoint01);
+  instance_create_depth(x,y,0,o_player1_dead);
 }
 
 

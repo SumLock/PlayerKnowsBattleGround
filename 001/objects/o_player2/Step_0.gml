@@ -32,13 +32,16 @@ if(is_parachute == 0)
 y += vspeed_;
 
 //在地圖極限距離時強制跳傘
-if (o_plane.x > 4900) && is_onplane == 1
+if GM.is_planeext == 1
 {
+  if (o_plane.x > 4900) && is_onplane == 1
+  {
    x = o_plane.x;
    y = o_plane.y;
    vspeed_ = 4;
    visible = true;
    is_onplane = 0;
+  }
 }
 
 //水平碰撞偵測
@@ -126,6 +129,7 @@ if (player_hp <= 0)
   instance_destroy();
   instance_destroy(o_player2_head);
   instance_destroy(aimpoint02);
+  instance_create_depth(x,y,0,o_player2_dead);
 }
 
 
