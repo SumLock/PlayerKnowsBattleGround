@@ -132,7 +132,11 @@ if (player_hp <= 0)
   instance_create_depth(x,y,0,o_player2_dead);
 }
 
-
+//設定獲勝後的圖層
+if GM.player2wins == 2
+{
+	depth = -500;
+}
 
 
 

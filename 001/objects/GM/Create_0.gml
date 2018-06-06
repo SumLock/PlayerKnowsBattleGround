@@ -13,3 +13,6 @@ RG_drop_random = 0;
 
 //設定飛機是否存在
 is_planeext = 1;
+
+//設定房間開始時間多久
+room_start = 0;

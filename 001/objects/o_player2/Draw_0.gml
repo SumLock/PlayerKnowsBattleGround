@@ -16,13 +16,13 @@ else if !place_meeting(x,y+40,o_block)
 else if hspeed_ > 3 || hspeed_ < -3
 {
 	//繪製玩家移動圖像
-	draw_sprite_ext(player01_walk, image_index , x ,y , xscale , 1 ,0 ,image_blend,image_alpha);
+	draw_sprite_ext(player02_walk, image_index , x ,y , xscale , 1 ,0 ,image_blend,image_alpha);
 	 image_speed = .5;
 }
 else
 {
 	//繪製玩家
-    draw_sprite_ext(player01_idle, image_index , x ,y , xscale , 1 ,0 ,image_blend,image_alpha);
+    draw_sprite_ext(player02_idle, image_index , x ,y , xscale , 1 ,0 ,image_blend,image_alpha);
 	image_speed = .5;
 }
 
@@ -197,4 +197,22 @@ if (gun_type == 4)
 	    draw_sprite_ext(fire,random_range(1,2),x+aimpoint02x*0.30,y-aimpoint02y*0.30+15,-xscale,1,dir,image_blend,image_alpha);
 	   }
    }
+}
+
+//--提示撿拾物品的文字--//
+if place_meeting(x,y,med_drop) && player_hp != 100
+{
+    draw_text_ext_transformed_color(x-340,y-260,"Press V to use the first aid kit.",5,400,2.5,2.5,0,c_black,c_black,c_black,c_black,1);
+}
+else if place_meeting(x,y,o_gun)
+{
+    draw_text_ext_transformed_color(x-270,y-260,"Press V to pick up the gun.",5,400,2.5,2.5,0,c_black,c_black,c_black,c_black,1);
+}
+else if place_meeting(x,y,o_hel)
+{
+    draw_text_ext_transformed_color(x-280,y-260,"Press V to pick up the helmet.",5,400,2.5,2.5,0,c_black,c_black,c_black,c_black,1);
+}
+else if place_meeting(x,y,o_vest)
+{
+    draw_text_ext_transformed_color(x-270,y-260,"Press V to pick up the vest.",5,400,2.5,2.5,0,c_black,c_black,c_black,c_black,1);
 }

@@ -5,16 +5,6 @@
     "name": "aimpoint02",
     "eventList": [
         {
-            "id": "ba46a126-a601-42bf-b566-7054d666f0f8",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "e0e17887-3d06-4893-877a-1560c1fd2f3f"
-        },
-        {
             "id": "7576255b-2025-45d7-8176-a1d2f7000b89",
             "modelName": "GMEvent",
             "mvc": "1.0",

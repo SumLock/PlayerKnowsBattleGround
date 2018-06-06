@@ -22,7 +22,7 @@ else if ext_time <= 2
 else if ext_time > 2.5
 {
     speed = 50;
-	direction = point_direction(x,y,o_player2.x,o_player.y);
+	direction = point_direction(x,y,o_player.x,o_player.y);
 }
 
 image_angle = direction;

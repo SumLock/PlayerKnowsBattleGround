@@ -11,3 +11,12 @@ if o_player2.xscale == -1
      x = o_player2.x+o_player2.aimpoint02x;
      y = o_player2.y-o_player2.aimpoint02y;
 }
+
+if o_player2.gun_type == 4
+{
+	visible = false;
+}
+else
+{
+	visible = true;
+}

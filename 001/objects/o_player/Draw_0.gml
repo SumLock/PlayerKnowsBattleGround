@@ -200,3 +200,21 @@ if (gun_type == 4)
 	   }
    }
 }
+
+//--提示撿拾物品的文字--//
+if place_meeting(x,y,med_drop) && player_hp != 100
+{
+    draw_text_ext_transformed_color(x-340,y-260,"Press 2 to use the first aid kit.",5,400,2.5,2.5,0,c_black,c_black,c_black,c_black,1);
+}
+else if place_meeting(x,y,o_gun)
+{
+    draw_text_ext_transformed_color(x-270,y-260,"Press 2 to pick up the gun.",5,400,2.5,2.5,0,c_black,c_black,c_black,c_black,1);
+}
+else if place_meeting(x,y,o_hel)
+{
+    draw_text_ext_transformed_color(x-280,y-260,"Press 2 to pick up the helmet.",5,400,2.5,2.5,0,c_black,c_black,c_black,c_black,1);
+}
+else if place_meeting(x,y,o_vest)
+{
+    draw_text_ext_transformed_color(x-270,y-260,"Press 2 to pick up the vest.",5,400,2.5,2.5,0,c_black,c_black,c_black,c_black,1);
+}
