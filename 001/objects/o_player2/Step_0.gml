@@ -16,7 +16,7 @@ else  //可微調的停止Smooth煞車動作((越小煞越慢
 }
 
 //跳傘時的設定
-if place_meeting(x,y+vspeed_,o_block)
+if place_meeting(x,y+vspeed_,o_block) 
 {
   is_parachute = 0;
   max_hspeed_ = 12;
@@ -32,6 +32,8 @@ if(is_parachute == 0)
 y += vspeed_;
 
 //在地圖極限距離時強制跳傘
+if is_menu == 0
+{
 if GM.is_planeext == 1
 {
   if (o_plane.x > 4900) && is_onplane == 1
@@ -42,6 +44,7 @@ if GM.is_planeext == 1
    visible = true;
    is_onplane = 0;
   }
+}
 }
 
 //水平碰撞偵測
@@ -133,10 +136,12 @@ if (player_hp <= 0)
 }
 
 //設定獲勝後的圖層
+if is_menu == 0
+{
 if GM.player2wins == 2
 {
 	depth = -500;
 }
-
+}
 
 

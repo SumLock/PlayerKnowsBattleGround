@@ -16,3 +16,13 @@ is_planeext = 1;
 
 //設定房間開始時間多久
 room_start = 0;
+
+//是否已創造按紐
+havecreatebutton = 0;
+
+//勝利後的倒數
+wincount_down = 0;
+
+randomize();
+//隨機選擇一個縮圈中心點
+safezonex = irandom_range(500,4620);

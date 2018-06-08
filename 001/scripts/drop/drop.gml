@@ -40,3 +40,4 @@
   instance_create_depth(irandom_range(500,4620) , irandom_range(0,1548) , 1 , med_drop);
   instance_create_depth(irandom_range(500,4620) , irandom_range(0,1548) , 1 , med_drop);
   instance_create_depth(irandom_range(500,4620) , irandom_range(0,1548) , 1 , med_drop);
+  

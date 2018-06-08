@@ -45,7 +45,15 @@ if count_down == 3300
 if player1wins == 2 ||  player2wins == 2
 {
    is_gameover = 1;
-}
+   depth = -500;
+   wincount_down ++;
+   if havecreatebutton == 0 && wincount_down >= 200
+   {
+     instance_create_depth(2560,1500,-500,Restart);
+     instance_create_depth(2560,1800,-500,Exit);
+     havecreatebutton = 1
+   }  
+} 
 
 //勝負判斷
 if !instance_exists(o_player) && is_gameover == 0
@@ -59,13 +67,16 @@ if !instance_exists(o_player) && is_gameover == 0
 }
 if is_gameover == 0 && !instance_exists(o_player) 
 {
-  if room_number <= 3 && o_player1_dead.dead_ani_count == 450
+  if room_number <= 3 && o_player1_dead.dead_ani_count >= 450
   {
-   room_goto_next();
    is_planeext = 1;
    room_number ++;
    havewincount = 0;
    room_start = 0;
+   room_goto_next();
+   randomize();
+   //隨機選擇一個縮圈中心點
+   safezonex = irandom_range(500,4620);
   }
 }
 
@@ -80,17 +91,20 @@ if !instance_exists(o_player2) && is_gameover == 0
 }
 if is_gameover == 0 && !instance_exists(o_player2) 
 {
-  if room_number <= 3 && o_player2_dead.dead_ani_count == 450
+  if room_number <= 3 && o_player2_dead.dead_ani_count >= 450
   {
-   room_goto_next();
    is_planeext = 1;
    room_number ++;
    havewincount = 0;
    room_start = 0;
+   randomize();
+   //隨機選擇一個縮圈中心點
+   safezonex = irandom_range(500,4620);
+   room_goto_next();
   }
 }
 
 //房間計時器
 room_start ++ ;
-room_start = clamp(room_start,0,601);
+room_start = clamp(room_start,0,12000);
 

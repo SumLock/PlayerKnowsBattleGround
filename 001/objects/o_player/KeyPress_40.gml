@@ -1,5 +1,6 @@
 //在飛機上時準備跳傘
-
+if is_menu == 0
+{
 if GM.is_planeext == 1
 {
   if (o_plane.x > 200) && is_onplane == 1
@@ -13,4 +14,5 @@ if GM.is_planeext == 1
       is_onplane = 0;
 	}
   }
+}
 }

@@ -1,0 +1,1 @@
+draw_sprite_ext(blue_left,image_index,x,y,1,1,0,image_blend,0.5);

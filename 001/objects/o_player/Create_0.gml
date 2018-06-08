@@ -44,4 +44,5 @@ is_parachute = 1;
 is_readytojump = 1;
 //人物是否在飛機上
 is_onplane = 1;
-
+//是否在主選單中
+is_menu = 0;

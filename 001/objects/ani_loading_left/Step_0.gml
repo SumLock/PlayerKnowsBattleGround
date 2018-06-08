@@ -3,13 +3,10 @@
 x -= move_speed;
 x = clamp(x,0,2560);
 
-//回合開始時向兩側移動
-if GM.room_start == 150
-{
-	move_speed = 50;
-}
+
+
 //回合結束時向中間移動
-else if !instance_exists(o_player)
+if !instance_exists(o_player)
 {
   if o_player1_dead.dead_ani_count == 300
   {	
@@ -22,4 +19,8 @@ else if !instance_exists(o_player2)
   {	
    	move_speed = -50;
   }
+}
+else if GM.room_start >= 150 //回合開始時向兩側移動
+{
+	move_speed = 50;
 }
