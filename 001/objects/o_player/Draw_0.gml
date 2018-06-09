@@ -8,7 +8,7 @@ if is_parachute == 1
    draw_sprite_ext(parachute , image_index , x , y-30 , 1,1,0 ,image_blend,image_alpha);
    draw_sprite_ext(player01_jump, 6 , x ,y , xscale , 1 ,0 ,image_blend,image_alpha);
 }
-else if !place_meeting(x,y+40,o_block)
+else if !place_meeting(x,y+40,o_cantpass)
 {
 	//繪製玩家跳躍圖像
    draw_sprite_ext(player01_jump, image_index , x ,y , xscale , 1 ,0 ,image_blend,image_alpha);

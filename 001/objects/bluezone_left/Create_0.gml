@@ -5,3 +5,6 @@ y = 1024;
 move_speed = 0;
 
 depth = -350;
+
+//碰觸到人的時間
+touch_time = 0;

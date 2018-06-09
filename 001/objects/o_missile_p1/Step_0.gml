@@ -30,6 +30,7 @@ image_angle = direction;
 if place_meeting(x , y , o_player2) || place_meeting(x , y ,o_block)
 {
      instance_destroy();
-	 instance_create_depth(x,y,0,o_explosion_dmg);
+	 instance_create_depth(x,y,0,o_explosion_dmg_p1);
 	 instance_create_depth(x,y,0,o_explosion_effect);
+	 audio_play_sound_at(sound_explo,x,y,0,0,0,1,false,1);
 }	

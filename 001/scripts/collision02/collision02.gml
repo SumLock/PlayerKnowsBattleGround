@@ -1,7 +1,7 @@
 
 
 //重力偵測
-if !place_meeting(x ,y+1 ,o_block)
+if !place_meeting(x ,y+1 ,o_cantpass)
 {
 	vspeed_ += gravity_;
 } //跳躍設定
@@ -11,10 +11,10 @@ else if keyboard_check_pressed(ord("W"))
 }
 
 //垂直碰撞偵測
-if place_meeting(x,y+vspeed_,o_block)
+if place_meeting(x,y+vspeed_,o_cantpass)
 {
 	//Smooth碰撞
-	while !place_meeting(x,y+sign(vspeed_),o_block)
+	while !place_meeting(x,y+sign(vspeed_),o_cantpass)
 	{
 		y += sign(vspeed_);
 	}			//

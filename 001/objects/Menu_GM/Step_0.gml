@@ -12,6 +12,7 @@ else
 if count_down >= 100
 {
    	room_goto(1);
+	audio_stop_sound(sound_menu);
 }
 
 //清除上一局的GM,布幕
@@ -22,6 +23,7 @@ if instance_exists(GM)
     instance_destroy(bluezone_left);
     instance_destroy(bluezone_right);
 	instance_destroy(GM);
+	audio_stop_sound(sound_win);
 }
 	//切換人物至主選單模式
 o_player.is_parachute = 0;
@@ -39,3 +41,4 @@ o_player2.gravity_ = 1;
 
 o_player.is_menu = 1;
 o_player2.is_menu = 1;
+

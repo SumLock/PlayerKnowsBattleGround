@@ -8,20 +8,51 @@ if hinput != 0
 	hspeed_ += hinput * acc_;
 	//水平向量範圍
 	hspeed_ = clamp(hspeed_,-max_hspeed_,max_hspeed_); 
-
 }
 else  //可微調的停止Smooth煞車動作((越小煞越慢
 {
 	hspeed_ = lerp(hspeed_ , 0 , .3);
+	audio_stop_sound(sound_F1_p2);
+	audio_stop_sound(sound_F2_p2);
+}
+
+//腳步聲的判斷式
+if hspeed_ != 0
+{
+	if !audio_is_playing(sound_F1_p2) && !audio_is_playing(sound_F2_p2)	
+	{
+		if vspeed_ == 0 && is_parachute == 0
+	    {
+		   if is_menu == 0 && GM.room_number <= 2
+		   {
+		     audio_play_sound_at(sound_F1_p2,x,y,0,0,0,1,false,2);
+		   }
+		   if is_menu == 0 && GM.room_number == 3
+		   {
+		     audio_play_sound_at(sound_F2_p2,x,y,0,0,0,1,false,2);
+		   }
+		}
+	}
+}
+
+//跳起後停止腳步聲
+if vspeed_ != 0
+{
+    audio_stop_sound(sound_F1_p2);
+	audio_stop_sound(sound_F2_p2);
 }
 
 //跳傘時的設定
-if place_meeting(x,y+vspeed_,o_block) 
+if place_meeting(x,y+vspeed_,o_cantpass) 
 {
-  is_parachute = 0;
   max_hspeed_ = 12;
   gravity_ = 1;
   vspeed_ = 0;
+    if is_menu == 0 && is_parachute == 1
+    {
+	 is_parachute = 0;
+     audio_play_sound_at(sound_landing,x,y,0,0,0,1,false,1);
+    }
 }
 
 if(is_parachute == 0)
@@ -38,20 +69,21 @@ if GM.is_planeext == 1
 {
   if (o_plane.x > 4900) && is_onplane == 1
   {
-   x = o_plane.x;
-   y = o_plane.y;
+   x = o_plane.x-100;
+   y = o_plane.y+80;
    vspeed_ = 4;
    visible = true;
    is_onplane = 0;
+   audio_play_sound_at(sound_leave,x,y,0,0,0,1,false,1);
   }
 }
 }
 
 //水平碰撞偵測
-if place_meeting(x+hspeed_,y,o_block)
+if place_meeting(x+hspeed_,y,o_cantpass)
 {
 	//Smooth碰撞
-	while !place_meeting(x+sign(hspeed_),y,o_block)
+	while !place_meeting(x+sign(hspeed_),y,o_cantpass)
 	{
 		x += sign(hspeed_);
 	}			//

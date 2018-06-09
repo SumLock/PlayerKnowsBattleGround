@@ -6,6 +6,7 @@ if (x >= 5400)
 {
    GM.is_planeext = 0;
    instance_destroy();
+   audio_stop_sound(sound_plane);
 }
 
 //跳傘碰撞偵測
@@ -17,3 +18,4 @@ if place_meeting(x+30,y+30,o_block)
   o_player.is_readytojump = 0;
   o_player2.is_readytojump = 0;
 }
+

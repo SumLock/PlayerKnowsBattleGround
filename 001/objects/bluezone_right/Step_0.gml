@@ -24,3 +24,28 @@ else
 {
 	move_speed = 0;
 }
+
+//當接觸到玩家時扣血+播放音效
+touch_time ++;
+
+if place_meeting(x,y,o_player) && GM.is_gameover == 0
+{
+	o_player.player_hp -= 0.15;
+	if touch_time % 30 == 0
+	{
+	  audio_play_sound_at(sound_headshot,x,y,0,0,0,1,false,2);
+	}
+}
+if place_meeting(x,y,o_player2) && GM.is_gameover == 0
+{
+	o_player2.player_hp -= 0.15;
+	if touch_time % 30 == 0
+	{
+	  audio_play_sound_at(sound_headshot,x,y,0,0,0,1,false,2);
+	}
+}
+
+if !place_meeting(x,y,o_player) && !place_meeting(x,y,o_player2)
+{
+	audio_pause_sound(sound_headshot);
+}

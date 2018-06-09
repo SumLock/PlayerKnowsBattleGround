@@ -34,16 +34,35 @@ if count_down == 2300
 if room_number == 3
 {
    count_down += 1;
-   count_down = clamp(count_down,0,3301);
+   count_down = clamp(count_down,0,3601);
 }
 if count_down == 3300
 {
    drop();
 }
+if count_down == 3600
+{
+  if RG_drop_random == 1 
+  {
+    instance_create_depth(1980,1350,0,gun_RG_drop);
+  }
+  else
+  {
+    instance_create_depth(1980,1350,0,gun_SG_drop);
+  }
+}
 
 //當Bo3比分一方達到兩分時
 if player1wins == 2 ||  player2wins == 2
 {
+   if !instance_exists(o_player)
+   {
+	   o_player2.player_hp = 9999;
+   }
+   if !instance_exists(o_player2)
+   {
+	   o_player.player_hp = 9999;
+   }
    is_gameover = 1;
    depth = -500;
    wincount_down ++;
@@ -77,6 +96,8 @@ if is_gameover == 0 && !instance_exists(o_player)
    randomize();
    //隨機選擇一個縮圈中心點
    safezonex = irandom_range(500,4620);
+   bluezone_left.x = 0;
+   bluezone_right.x = 5120;
   }
 }
 
@@ -97,14 +118,28 @@ if is_gameover == 0 && !instance_exists(o_player2)
    room_number ++;
    havewincount = 0;
    room_start = 0;
+   room_goto_next();
    randomize();
    //隨機選擇一個縮圈中心點
    safezonex = irandom_range(500,4620);
-   room_goto_next();
+   bluezone_left.x = 0;
+   bluezone_right.x = 5120;
   }
 }
 
 //房間計時器
 room_start ++ ;
 room_start = clamp(room_start,0,12000);
+
+if player1wins == 2 ||  player2wins == 2
+{
+   if is_winplay == 0
+   {
+	   audio_play_sound(sound_win, 1, true);
+	   is_winplay = 1;
+   }
+} 
+
+
+
 

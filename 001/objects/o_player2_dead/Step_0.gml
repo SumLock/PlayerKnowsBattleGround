@@ -1,7 +1,7 @@
 //結束死亡動畫
 if image_speed > 0
 {
-   if image_index >= 16
+   if image_index >= 18
    {
         stop = 1;
    }

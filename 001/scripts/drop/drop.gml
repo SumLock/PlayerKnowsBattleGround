@@ -7,18 +7,14 @@
     //生成衝鋒槍3把 
   instance_create_depth(irandom_range(500,4620) , irandom_range(0,1548) , 1 , gun_SMG_drop);
   instance_create_depth(irandom_range(500,4620) , irandom_range(0,1548) , 1 , gun_SMG_drop);
-  instance_create_depth(irandom_range(500,4620) , irandom_range(0,1548) , 1 , gun_SMG_drop);
     //生成步槍3把
-  instance_create_depth(irandom_range(500,4620) , irandom_range(0,1548) , 1 , gun_RF_drop);
   instance_create_depth(irandom_range(500,4620) , irandom_range(0,1548) , 1 , gun_RF_drop);
   instance_create_depth(irandom_range(500,4620) , irandom_range(0,1548) , 1 , gun_RF_drop);
     //生成霰彈槍3把
   instance_create_depth(irandom_range(500,4620) , irandom_range(0,1548) , 1 , gun_SHG_drop);
   instance_create_depth(irandom_range(500,4620) , irandom_range(0,1548) , 1 , gun_SHG_drop);
-  instance_create_depth(irandom_range(500,4620) , irandom_range(0,1548) , 1 , gun_SHG_drop);
    
     //生成一級甲3個
-  instance_create_depth(irandom_range(500,4620) , irandom_range(0,1548) , 1 , A_L1_drop);
   instance_create_depth(irandom_range(500,4620) , irandom_range(0,1548) , 1 , A_L1_drop);
   instance_create_depth(irandom_range(500,4620) , irandom_range(0,1548) , 1 , A_L1_drop);
     //生成二級甲2個
@@ -27,7 +23,6 @@
     //生成三級甲1個
   instance_create_depth(irandom_range(500,4620) , irandom_range(0,1548) , 1 , A_L3_drop);
     //生成一級頭3個
-  instance_create_depth(irandom_range(500,4620) , irandom_range(0,1548) , 1 , H_L1_drop);
   instance_create_depth(irandom_range(500,4620) , irandom_range(0,1548) , 1 , H_L1_drop);
   instance_create_depth(irandom_range(500,4620) , irandom_range(0,1548) , 1 , H_L1_drop);
     //生成二級頭2個

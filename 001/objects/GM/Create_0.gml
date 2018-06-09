@@ -1,6 +1,8 @@
 //倒數計時器
 count_down = 0;
 
+depth = -300
+
 //設定房間的變數
 havewincount = 0;
 player1wins = 0;
@@ -23,6 +25,18 @@ havecreatebutton = 0;
 //勝利後的倒數
 wincount_down = 0;
 
+//是否已播放吃雞音樂
+is_winplay = 0;
+
 randomize();
 //隨機選擇一個縮圈中心點
 safezonex = irandom_range(500,4620);
+
+audio_play_sound(sound_backnosiy, 10, true);
+
+//是否靜音飛機
+is_planemute = 0;
+
+//設定音源位置
+audio_listener_position(2560,1024,0);
+audio_listener_orientation(0, 0, 1000, 0, -1, 0);
