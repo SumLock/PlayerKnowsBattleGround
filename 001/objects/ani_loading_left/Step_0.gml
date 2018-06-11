@@ -1,7 +1,7 @@
 //設定過場布幕移動
 
 x -= move_speed;
-x = clamp(x,0,2560);
+x = clamp(x,-1280,1280);
 
 
 

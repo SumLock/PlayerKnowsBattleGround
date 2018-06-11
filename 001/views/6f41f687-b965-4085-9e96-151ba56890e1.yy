@@ -28,7 +28,8 @@
         "a377fdfd-98bf-4482-83f2-a01c9379e075",
         "03047230-a000-4317-838e-b7894248e1af",
         "74268833-bf4f-474b-b528-fde95250d263",
-        "820e4a15-74cb-4a79-93f0-5a95cea26d78"
+        "820e4a15-74cb-4a79-93f0-5a95cea26d78",
+        "d60b3857-cc0d-4dd3-b537-4d9524ac4243"
     ],
     "filterType": "GMSprite",
     "folderName": "Background_sprite",

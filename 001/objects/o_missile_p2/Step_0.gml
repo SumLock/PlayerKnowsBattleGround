@@ -19,7 +19,7 @@ else if ext_time <= 2
 {
 	speed = 40;
 }
-else if ext_time > 2.5
+else if ext_time > 2.5 && instance_exists(o_player)
 {
     speed = 50;
 	direction = point_direction(x,y,o_player.x,o_player.y);

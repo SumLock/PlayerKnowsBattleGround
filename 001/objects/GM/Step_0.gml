@@ -96,8 +96,8 @@ if is_gameover == 0 && !instance_exists(o_player)
    randomize();
    //隨機選擇一個縮圈中心點
    safezonex = irandom_range(500,4620);
-   bluezone_left.x = 0;
-   bluezone_right.x = 5120;
+   bluezone_left.x = -2560;
+   bluezone_right.x = 7680;
   }
 }
 
@@ -122,8 +122,8 @@ if is_gameover == 0 && !instance_exists(o_player2)
    randomize();
    //隨機選擇一個縮圈中心點
    safezonex = irandom_range(500,4620);
-   bluezone_left.x = 0;
-   bluezone_right.x = 5120;
+   bluezone_left.x = -2560;
+   bluezone_right.x = 7680;
   }
 }
 

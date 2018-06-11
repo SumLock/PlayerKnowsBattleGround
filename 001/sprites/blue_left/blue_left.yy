@@ -16,24 +16,24 @@
     "edgeFiltering": false,
     "frames": [
         {
-            "id": "a1fd35ec-8a5c-4562-a88e-c9a8ba091f23",
+            "id": "d2180654-52a0-48be-82f4-c27ea9d79a52",
             "modelName": "GMSpriteFrame",
             "mvc": "1.0",
             "SpriteId": "03047230-a000-4317-838e-b7894248e1af",
             "compositeImage": {
-                "id": "b83944c9-7923-482e-83d4-88647fea94fa",
+                "id": "8d8b3a2a-86f9-4a3f-82f0-aa734e252d45",
                 "modelName": "GMSpriteImage",
                 "mvc": "1.0",
-                "FrameId": "a1fd35ec-8a5c-4562-a88e-c9a8ba091f23",
+                "FrameId": "d2180654-52a0-48be-82f4-c27ea9d79a52",
                 "LayerId": "00000000-0000-0000-0000-000000000000"
             },
             "images": [
                 {
-                    "id": "608fdadc-bdbe-4513-b9ab-18c2c8ffd7ef",
+                    "id": "30fe7146-891e-43a5-bf11-c551b8e294f1",
                     "modelName": "GMSpriteImage",
                     "mvc": "1.0",
-                    "FrameId": "a1fd35ec-8a5c-4562-a88e-c9a8ba091f23",
-                    "LayerId": "75987d41-28a9-4612-aff9-8cee3c839b16"
+                    "FrameId": "d2180654-52a0-48be-82f4-c27ea9d79a52",
+                    "LayerId": "431c16d1-4dd1-457c-b436-88d665a6aa5f"
                 }
             ]
         }
@@ -43,7 +43,7 @@
     "height": 2048,
     "layers": [
         {
-            "id": "75987d41-28a9-4612-aff9-8cee3c839b16",
+            "id": "431c16d1-4dd1-457c-b436-88d665a6aa5f",
             "modelName": "GMImageLayer",
             "mvc": "1.0",
             "SpriteId": "03047230-a000-4317-838e-b7894248e1af",
@@ -54,7 +54,7 @@
             "visible": true
         }
     ],
-    "origin": 5,
+    "origin": 4,
     "originLocked": false,
     "playbackSpeed": 15,
     "playbackSpeedType": 0,
@@ -65,6 +65,6 @@
     "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
     "type": 0,
     "width": 5120,
-    "xorig": 5119,
+    "xorig": 2560,
     "yorig": 1024
 }

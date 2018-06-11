@@ -1503,6 +1503,14 @@
             }
         },
         {
+            "Key": "d60b3857-cc0d-4dd3-b537-4d9524ac4243",
+            "Value": {
+                "id": "8a17f63c-b3c6-4889-880b-201664338fea",
+                "resourcePath": "sprites\\tree\\tree.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d681e406-a3a3-41a5-8215-faf8711c4bfb",
             "Value": {
                 "id": "134b728c-0577-4393-af05-4bc341071790",
@@ -1572,6 +1580,14 @@
                 "id": "7291a2ff-cd50-40aa-a4c8-148db6e927a8",
                 "resourcePath": "objects\\o_player2\\o_player2.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e8ad7319-9c99-48bd-b36f-2078ab87a52d",
+            "Value": {
+                "id": "33ab4fb9-65e8-4012-9ef2-82b63cc95c26",
+                "resourcePath": "tilesets\\tile_tree\\tile_tree.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {

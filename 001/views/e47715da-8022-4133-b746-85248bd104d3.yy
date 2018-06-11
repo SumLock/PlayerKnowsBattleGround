@@ -10,7 +10,8 @@
         "af9244db-50ba-4232-8254-dad5ed963d62",
         "3f5c3a99-85ef-4b41-ae30-416f73fe3662",
         "6413e0e3-7736-48f2-8646-975e882b8d42",
-        "c4aa18fb-c497-413c-a255-67e23bc2a64f"
+        "c4aa18fb-c497-413c-a255-67e23bc2a64f",
+        "e8ad7319-9c99-48bd-b36f-2078ab87a52d"
     ],
     "filterType": "GMTileSet",
     "folderName": "background_tile",
