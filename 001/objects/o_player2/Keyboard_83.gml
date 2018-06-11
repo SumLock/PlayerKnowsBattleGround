@@ -3,7 +3,7 @@ if is_menu == 0
 {
 if GM.is_planeext == 1
 {
-  if (o_plane.x > 200) && is_onplane == 1
+  if (o_plane.x > 100) && is_onplane == 1
   {
 	if is_readytojump == 1
 	{
