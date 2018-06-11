@@ -132,11 +132,11 @@ if (gun_type == 4)
 {
 	if (xscale == -1)
 	{
-     r = redline(x , y , x+aimpoint02x*10 , y-aimpoint02y*10-10, o_solid , true ,true);
+     r = redline(x , y , x+aimpoint02x*10 , y-aimpoint02y*10-10, o_cantpass , true ,true);
 	}
 	if (xscale == 1)
 	{
-     r = redline(x , y , x-aimpoint02x*10 , y-aimpoint02y*10-10, o_solid , true ,true);
+     r = redline(x , y , x-aimpoint02x*10 , y-aimpoint02y*10-10, o_cantpass , true ,true);
 	}
 }
 else if (o_player2.gun_type != 0) && (have_gun == false)
