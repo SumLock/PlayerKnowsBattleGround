@@ -490,7 +490,7 @@
             "Key": "4ed353d2-85c8-4d17-9ac4-4b5ccf32d2bb",
             "Value": {
                 "id": "36fc24d2-75bd-425c-acad-5e48c22ef50c",
-                "resourcePath": "objects\\guide_P2\\guide_P2.yy",
+                "resourcePath": "objects\\guide_P1\\guide_P1.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -930,7 +930,7 @@
             "Key": "86f6bc0c-a5bd-40a7-baa7-adca6c7ffaa7",
             "Value": {
                 "id": "b2ff8c87-2db8-4efb-a3df-52a3e0ce47e3",
-                "resourcePath": "objects\\guide_P1\\guide_P1.yy",
+                "resourcePath": "objects\\guide_P2\\guide_P2.yy",
                 "resourceType": "GMObject"
             }
         },

@@ -164,7 +164,7 @@ if (player_hp <= 0)
   instance_destroy();
   instance_destroy(o_player1_head);
   instance_destroy(aimpoint01);
-  instance_create_depth(x,y,0,o_player1_dead);
+  instance_create_depth(x+sign(x-o_player2.x)*100,y,0,o_player1_dead);
 }
 
 //設定獲勝後的圖層
