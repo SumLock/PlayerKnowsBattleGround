@@ -1,5 +1,5 @@
 xscale = sign(o_player2.x - x);
-image_speed = 0.12;
+image_speed = 0.15;
 stop = 0;
 
 //死亡動畫倒數

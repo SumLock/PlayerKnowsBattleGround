@@ -32,7 +32,7 @@ if place_meeting(x,y,o_player) && GM.is_gameover == 0
 {
 	if instance_exists(o_player) && instance_exists(o_player2)
     {
-	o_player.player_hp -= 0.15;
+	o_player.player_hp -= 0.1501;
 	if touch_time % 30 == 0
 	{
 	  audio_play_sound_at(sound_headshot,x,y,0,0,0,1,false,2);

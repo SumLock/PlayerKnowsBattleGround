@@ -159,7 +159,7 @@ if (player_vest <= 0)
   vest_resist = 1;
 }
 //HP歸零時
-if (player_hp <= 0)
+if (player_hp <= 0)  && player_hp <= o_player.player_hp 
 {
   instance_destroy();
   instance_destroy(o_player2_head);

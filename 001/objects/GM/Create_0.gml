@@ -40,3 +40,4 @@ is_planemute = 0;
 //設定音源位置
 audio_listener_position(2560,1024,0);
 audio_listener_orientation(0, 0, 1000, 0, -1, 0);
+

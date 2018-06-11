@@ -13,7 +13,7 @@ if (x >= 5400)
 o_player.is_readytojump = 1;
 o_player2.is_readytojump = 1;
 
-if place_meeting(x+30,y+30,o_block)
+if place_meeting(x+30,y+30,o_cantpass)
 {
   o_player.is_readytojump = 0;
   o_player2.is_readytojump = 0;
